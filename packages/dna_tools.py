@@ -14,7 +14,7 @@ def transcribe(seq: str) -> str:
     """
     rna = ''
     for nucl in seq:
-        rna += dna2rna[i]
+        rna += dna2rna[nucl]
     return rna
     
 def reverse(seq: str) -> str:
@@ -38,10 +38,10 @@ def complement(seq: str) ->str:
     cstrand = ''
     if 'u' in seq.lower():
         for nucl in seq:
-            cstrand += rna2crna[i]
+            cstrand += rna2crna[nucl]
     else:
         for nucl in seq:
-            cstrand += dna2cdna[i]
+            cstrand += dna2cdna[nucl]
     return cstrand
 
 def reverse_complement(seq: str) -> str:
