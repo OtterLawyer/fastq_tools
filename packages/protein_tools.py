@@ -130,7 +130,7 @@ def count_extinction_280nm(prot: str) -> int:
     return e
 
 
-def protein_tools (function : str, *prots : str) -> (int, list, str): 
+def protein_tools (function : str, *prots : str) -> Union[int, list, str]: 
     """
     Consists of several functions, is able to:
       -check whether the inputted sequence is a peptide 
