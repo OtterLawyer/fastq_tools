@@ -31,7 +31,7 @@ def reverse_complement(seq):
 def count_gc(seq):
     gc = seq.lower().count('g') + seq.lower().count('c')
     answer = gc / len(seq) * 100
-    return f'{round(answer, 2)}%'
+    return round(answer, 2)
 
 def dna_or_rna(seq):
     if set(seq.lower()) == set('atgc'):
