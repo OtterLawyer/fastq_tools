@@ -6,6 +6,9 @@ This is collection of tools for dna, rna, protein and fastq.
 - [Introduction](#Introduction)
 - [Installation](#Installation)
 - [How to use](#Use)
+- [NA tools](#na_tools)
+- [Protein tools](#p_tools)
+- [Fastq tools](#fastq_tools)
 - [Autor](#Autor)
 
 # Introduction <a name="Introduction"></a>
@@ -26,7 +29,7 @@ You need to import module bioinf_tools. In this example we will import bioinf_to
 ```python
 import bioinf_tools as bi
 ```
-## na_tools
+## na_tools <a name="na_tools"></a>
 na_tools takes only DNA and RNA sequences and command to execute. It takes at least 2 arguments first: first to second to last arguments dna/rna sequences and last argument must be command. Arguments must be string type. Arguments other then DNA and RNA will be ignored.
 
 If count of sequences is greater than 1 run_dna_rna_tools returns list, if count of seqeunces is 1 it returns str or int depending on command. 
@@ -64,7 +67,7 @@ bi.na_tools('ATGC', 'count_gc') # '50%'
 bi.na_tools('AtG', 'dna_or_rna') # 'dna'
 bi.na_tools('ATG', 'aT', 'get_sequence_length') # ['3', '2']
 ```
-## p_tools
+## p_tools <a name="p_tools"></a>
 Provide a tool with the sequence(s) of the protein(s) in 1-letter format (for example, DYKDDDDK) and the function needed. If you
 occasionally write down a non-peptide sequence, the programm will return an error.  
 
@@ -85,7 +88,7 @@ bi.p_tools('convert_1_to_3', 'DYKDDDDK') #'AspTyrLysAspAspAspAspLys'
 bi.p_tools('count_extinction_280nm', 'DYKDDDDK') #1490
 ```
 
-## fastq_tools
+## fastq_tools <a name="fastq_tools"></a>
 Filters fastq files by specifiable parametrs.
 ### Arguments:
 - seqs (dict[str,str]) - a dictionary consisting of fastq sequences. Key - string, sequence name. The value is a tuple of two strings: sequence and quality.
