@@ -1,6 +1,23 @@
 from typing import Union
-from dna_rna_tools.py import count_gc
+def count_gc(seq: str) -> float:
+    """
+    Counts gc content of sequence.
+    Arguments: 
+        -seq (str): dna/rna seqeunce.
+    Return: 
+        -float - percent of GC content in sequence.
+    """
+    gc = seq.lower().count('g') + seq.lower().count('c')
+    answer = gc / len(seq) * 100
+    return round(answer, 2)
 def count_qscore(score_string: str) -> float:
+    """
+    Counts quality score for inputed quality score string.
+    Argumets:
+        -score_string (str) - score string from fastq file.
+    Return:
+        -mean_quality (float) - mean quality of sequence based on quality score string.
+    """
     total_score = 0
     for symb in set(score_string):
         total_score += score_string.count(symb) * (ord(symb) - 33)
