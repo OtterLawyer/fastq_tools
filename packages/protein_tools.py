@@ -134,12 +134,13 @@ def count_extinction_280nm(prot: str) -> int:
 def protein_tools (function : str, *prots : str) -> Union[int, list, str]: 
     """
     Consists of several functions, is able to:
-      -check whether the inputted sequence is a peptide 
-      -count the length of the sequence
-      -count the length of the coding nucleotide sequence of the inputted sequence
-      -count the molecular mass of the sequence
-      -convert 1-letter input style into 3-letter and vice versa
-      -show the aminoacid content of the sequence
+      -built in fuction 'is_prot': check whether the inputted sequence is a peptide 
+      -'count_length': count the length of the sequence
+      -'count_nucleotide_length': count the length of the coding nucleotide sequence of the inputted sequence
+      -'count_molecular_mass': count the molecular mass of the sequence
+      -'convert_1_to_3': convert 1-letter input style into 3-letter and vice versa
+      -'show_content': show the aminoacid content of the sequence
+      -''count_extinction_280nm': Count extinction coefficient 280nm
      Arguments:
       -function (str) - the name of the action, the user wants to do on the sequence(s)
       -prots (str) - the sequence(s) that should be manipulated
